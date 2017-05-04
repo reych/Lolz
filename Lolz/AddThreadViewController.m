@@ -7,10 +7,13 @@
 //
 
 #import "AddThreadViewController.h"
+#import "User.h"
+#import "Utils.h"
 
 @interface AddThreadViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *instructionsTextView;
+@property (strong, nonatomic) NSString *imageName;
 
 @end
 
@@ -27,10 +30,20 @@
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 - (IBAction)doneButtonDidPress:(UIBarButtonItem *)sender {
-    UIImage* image = self.imageView.image;
-    NSString* instructions = self.instructionsTextView.text;
+    // Encode file.
+     NSData *imageData = UIImageJPEGRepresentation(self.imageView.image, 0.8); // write image.
+    // Create filename from date.
+    NSString *path = [Utils createPathToDocumentDirectoryWithFilename:self.imageName];
+    NSLog(@"%@",path);
     
-    self.completionHandler(image, instructions);
+    // Save image to file.
+    [imageData writeToFile:path atomically:YES];
+    
+    // Set completion handler
+    NSString* instructions = self.instructionsTextView.text;
+    self.completionHandler(self.imageName, instructions);
+    
+    NSLog(@"Done adding");
 }
 
 - (void)viewDidLoad {
@@ -46,8 +59,11 @@
 // --------- [ ImagePicker Delegates ] -------- //
 - (void) imagePickerController: (UIImagePickerController *)picker
  didFinishPickingMediaWithInfo: (NSDictionary *)info {
-    UIImage *selectedImage = info[UIImagePickerControllerEditedImage];
+    //UIImage *selectedImage = info[UIImagePickerControllerEditedImage];
     UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
+    
+    NSString *date = [Utils getCurrentTime];
+    self.imageName = [[NSString alloc] initWithFormat:@"%@.jpg", date];
     
     self.imageView.image = originalImage;
     

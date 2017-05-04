@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4A6C57E906DA701C9AFEDF /* libPods-Lolz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1706C34F915CC8F150DEF7 /* libPods-Lolz.a */; };
 		BE22D6801EB9870C008007DE /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE22D67F1EB9870C008007DE /* Users.plist */; };
 		BE22D6841EB9A1F6008007DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE22D6831EB9A1F6008007DE /* GoogleService-Info.plist */; };
+		BE22D6861EB9A74E008007DE /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE22D6851EB9A74E008007DE /* FirebaseDatabase.framework */; };
+		BE22D6881EB9A79E008007DE /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE22D6871EB9A79E008007DE /* FirebaseAnalytics.framework */; };
+		BE22D68A1EB9A7AC008007DE /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE22D6891EB9A7AC008007DE /* FirebaseCore.framework */; };
+		BE22D68C1EB9A7B5008007DE /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE22D68B1EB9A7B5008007DE /* FirebaseInstanceID.framework */; };
+		BE22D68E1EB9A7BD008007DE /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE22D68D1EB9A7BD008007DE /* GoogleToolboxForMac.framework */; };
+		BE22D6921EBA3EE6008007DE /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BE22D6911EBA3EE6008007DE /* Utils.m */; };
+		BE22D6991EBA7C67008007DE /* PostsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE22D6981EBA7C67008007DE /* PostsTableViewCell.m */; };
 		BE270D631EB6D720008F9AF6 /* ThreadsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D621EB6D720008F9AF6 /* ThreadsTableViewController.m */; };
-		BE270D661EB6D764008F9AF6 /* AddPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D651EB6D764008F9AF6 /* AddPostViewController.m */; };
 		BE270D691EB6D77D008F9AF6 /* EditPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D681EB6D77D008F9AF6 /* EditPostViewController.m */; };
-		BE270D6C1EB6D7A4008F9AF6 /* ThreadsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D6B1EB6D7A4008F9AF6 /* ThreadsDetailViewController.m */; };
+		BE270D6C1EB6D7A4008F9AF6 /* ThreadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D6B1EB6D7A4008F9AF6 /* ThreadDetailViewController.m */; };
 		BE270D721EB6DAA0008F9AF6 /* Thread.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D711EB6DAA0008F9AF6 /* Thread.m */; };
 		BE270D751EB8540F008F9AF6 /* ThreadsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D741EB8540F008F9AF6 /* ThreadsModel.m */; };
 		BE270D781EB862A8008F9AF6 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D771EB862A8008F9AF6 /* Post.m */; };
@@ -25,23 +32,33 @@
 		BE270D8D1EB968AA008F9AF6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE270D8C1EB968AA008F9AF6 /* LoginViewController.m */; };
 		BE38347B1EB312C7006EE442 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE38347A1EB312C7006EE442 /* main.m */; };
 		BE38347E1EB312C7006EE442 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE38347D1EB312C7006EE442 /* AppDelegate.m */; };
-		BE3834811EB312C7006EE442 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3834801EB312C7006EE442 /* ViewController.m */; };
 		BE3834841EB312C7006EE442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3834821EB312C7006EE442 /* Main.storyboard */; };
 		BE3834861EB312C7006EE442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3834851EB312C7006EE442 /* Assets.xcassets */; };
 		BE3834891EB312C7006EE442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3834871EB312C7006EE442 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06ECC543D975D0C5A4A041A2 /* Pods-Lolz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lolz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lolz/Pods-Lolz.release.xcconfig"; sourceTree = "<group>"; };
+		189C846C6B407FEAB55B2120 /* Pods-Lolz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lolz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lolz/Pods-Lolz.debug.xcconfig"; sourceTree = "<group>"; };
+		4D1706C34F915CC8F150DEF7 /* libPods-Lolz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lolz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE22D67F1EB9870C008007DE /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 		BE22D6831EB9A1F6008007DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE22D6851EB9A74E008007DE /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		BE22D6871EB9A79E008007DE /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		BE22D6891EB9A7AC008007DE /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		BE22D68B1EB9A7B5008007DE /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		BE22D68D1EB9A7BD008007DE /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		BE22D68F1EB9A885008007DE /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		BE22D6901EBA3EE6008007DE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		BE22D6911EBA3EE6008007DE /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		BE22D6971EBA7C67008007DE /* PostsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsTableViewCell.h; sourceTree = "<group>"; };
+		BE22D6981EBA7C67008007DE /* PostsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsTableViewCell.m; sourceTree = "<group>"; };
 		BE270D611EB6D720008F9AF6 /* ThreadsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadsTableViewController.h; sourceTree = "<group>"; };
 		BE270D621EB6D720008F9AF6 /* ThreadsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadsTableViewController.m; sourceTree = "<group>"; };
-		BE270D641EB6D764008F9AF6 /* AddPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostViewController.h; sourceTree = "<group>"; };
-		BE270D651EB6D764008F9AF6 /* AddPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostViewController.m; sourceTree = "<group>"; };
 		BE270D671EB6D77D008F9AF6 /* EditPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPostViewController.h; sourceTree = "<group>"; };
 		BE270D681EB6D77D008F9AF6 /* EditPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPostViewController.m; sourceTree = "<group>"; };
-		BE270D6A1EB6D7A4008F9AF6 /* ThreadsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadsDetailViewController.h; sourceTree = "<group>"; };
-		BE270D6B1EB6D7A4008F9AF6 /* ThreadsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadsDetailViewController.m; sourceTree = "<group>"; };
+		BE270D6A1EB6D7A4008F9AF6 /* ThreadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadDetailViewController.h; sourceTree = "<group>"; };
+		BE270D6B1EB6D7A4008F9AF6 /* ThreadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadDetailViewController.m; sourceTree = "<group>"; };
 		BE270D701EB6DAA0008F9AF6 /* Thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thread.h; sourceTree = "<group>"; };
 		BE270D711EB6DAA0008F9AF6 /* Thread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thread.m; sourceTree = "<group>"; };
 		BE270D731EB8540F008F9AF6 /* ThreadsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadsModel.h; sourceTree = "<group>"; };
@@ -62,8 +79,6 @@
 		BE38347A1EB312C7006EE442 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BE38347C1EB312C7006EE442 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BE38347D1EB312C7006EE442 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BE38347F1EB312C7006EE442 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BE3834801EB312C7006EE442 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE3834831EB312C7006EE442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE3834851EB312C7006EE442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE3834881EB312C7006EE442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,27 +90,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE22D6861EB9A74E008007DE /* FirebaseDatabase.framework in Frameworks */,
 				BE270D8A1EB967CE008F9AF6 /* FBSDKShareKit.framework in Frameworks */,
 				BE270D841EB96217008F9AF6 /* FBSDKLoginKit.framework in Frameworks */,
 				BE270D881EB967BC008F9AF6 /* FBSDKCoreKit.framework in Frameworks */,
+				BE22D68C1EB9A7B5008007DE /* FirebaseInstanceID.framework in Frameworks */,
+				BE22D68A1EB9A7AC008007DE /* FirebaseCore.framework in Frameworks */,
+				BE22D6881EB9A79E008007DE /* FirebaseAnalytics.framework in Frameworks */,
 				BE270D861EB967A4008F9AF6 /* Bolts.framework in Frameworks */,
+				9F4A6C57E906DA701C9AFEDF /* libPods-Lolz.a in Frameworks */,
+				BE22D68E1EB9A7BD008007DE /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE22D6931EBA3EF2008007DE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				BE22D6901EBA3EE6008007DE /* Utils.h */,
+				BE22D6911EBA3EE6008007DE /* Utils.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		BE270D6D1EB6D960008F9AF6 /* Control */ = {
 			isa = PBXGroup;
 			children = (
 				BE270D8B1EB968AA008F9AF6 /* LoginViewController.h */,
 				BE270D8C1EB968AA008F9AF6 /* LoginViewController.m */,
-				BE270D641EB6D764008F9AF6 /* AddPostViewController.h */,
-				BE270D651EB6D764008F9AF6 /* AddPostViewController.m */,
 				BE270D671EB6D77D008F9AF6 /* EditPostViewController.h */,
 				BE270D681EB6D77D008F9AF6 /* EditPostViewController.m */,
-				BE270D6A1EB6D7A4008F9AF6 /* ThreadsDetailViewController.h */,
-				BE270D6B1EB6D7A4008F9AF6 /* ThreadsDetailViewController.m */,
+				BE22D6971EBA7C67008007DE /* PostsTableViewCell.h */,
+				BE22D6981EBA7C67008007DE /* PostsTableViewCell.m */,
+				BE270D6A1EB6D7A4008F9AF6 /* ThreadDetailViewController.h */,
+				BE270D6B1EB6D7A4008F9AF6 /* ThreadDetailViewController.m */,
 				BE270D611EB6D720008F9AF6 /* ThreadsTableViewController.h */,
 				BE270D621EB6D720008F9AF6 /* ThreadsTableViewController.m */,
 				BE270D791EB9273F008F9AF6 /* AddThreadViewController.h */,
@@ -107,9 +137,9 @@
 		BE270D6E1EB6D9A9008F9AF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE270D761EB862A8008F9AF6 /* Post.h */,
 				BE270D7C1EB944A4008F9AF6 /* User.h */,
 				BE270D7D1EB944A4008F9AF6 /* User.m */,
+				BE270D761EB862A8008F9AF6 /* Post.h */,
 				BE270D771EB862A8008F9AF6 /* Post.m */,
 				BE270D701EB6DAA0008F9AF6 /* Thread.h */,
 				BE270D711EB6DAA0008F9AF6 /* Thread.m */,
@@ -130,6 +160,12 @@
 		BE270D821EB961C4008F9AF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D1706C34F915CC8F150DEF7 /* libPods-Lolz.a */,
+				BE22D68D1EB9A7BD008007DE /* GoogleToolboxForMac.framework */,
+				BE22D68B1EB9A7B5008007DE /* FirebaseInstanceID.framework */,
+				BE22D6891EB9A7AC008007DE /* FirebaseCore.framework */,
+				BE22D6871EB9A79E008007DE /* FirebaseAnalytics.framework */,
+				BE22D6851EB9A74E008007DE /* FirebaseDatabase.framework */,
 				BE270D891EB967CE008F9AF6 /* FBSDKShareKit.framework */,
 				BE270D871EB967BC008F9AF6 /* FBSDKCoreKit.framework */,
 				BE270D851EB967A4008F9AF6 /* Bolts.framework */,
@@ -143,6 +179,7 @@
 			children = (
 				BE3834781EB312C7006EE442 /* Lolz */,
 				BE3834771EB312C7006EE442 /* Products */,
+				CA558762564B59324825139A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,12 +200,13 @@
 				BE270D6D1EB6D960008F9AF6 /* Control */,
 				BE38347C1EB312C7006EE442 /* AppDelegate.h */,
 				BE38347D1EB312C7006EE442 /* AppDelegate.m */,
-				BE38347F1EB312C7006EE442 /* ViewController.h */,
-				BE3834801EB312C7006EE442 /* ViewController.m */,
+				BE22D68F1EB9A885008007DE /* Firebase.h */,
 				BE3834851EB312C7006EE442 /* Assets.xcassets */,
 				BE3834871EB312C7006EE442 /* LaunchScreen.storyboard */,
 				BE38348A1EB312C7006EE442 /* Info.plist */,
+				BE22D67F1EB9870C008007DE /* Users.plist */,
 				BE22D6831EB9A1F6008007DE /* GoogleService-Info.plist */,
+				BE22D6931EBA3EF2008007DE /* Tools */,
 				BE3834791EB312C7006EE442 /* Supporting Files */,
 			);
 			path = Lolz;
@@ -178,9 +216,17 @@
 			isa = PBXGroup;
 			children = (
 				BE38347A1EB312C7006EE442 /* main.m */,
-				BE22D67F1EB9870C008007DE /* Users.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA558762564B59324825139A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				189C846C6B407FEAB55B2120 /* Pods-Lolz.debug.xcconfig */,
+				06ECC543D975D0C5A4A041A2 /* Pods-Lolz.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE38348D1EB312C7006EE442 /* Build configuration list for PBXNativeTarget "Lolz" */;
 			buildPhases = (
+				90FB0F25687C091F710EEE68 /* [CP] Check Pods Manifest.lock */,
 				BE3834721EB312C7006EE442 /* Sources */,
 				BE3834731EB312C7006EE442 /* Frameworks */,
 				BE3834741EB312C7006EE442 /* Resources */,
+				026EA50E6947B8E58BEA7E55 /* [CP] Embed Pods Frameworks */,
+				D1FBB12525BF7DB7980C6DE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,24 +299,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026EA50E6947B8E58BEA7E55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lolz/Pods-Lolz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90FB0F25687C091F710EEE68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1FBB12525BF7DB7980C6DE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lolz/Pods-Lolz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE3834721EB312C7006EE442 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BE270D691EB6D77D008F9AF6 /* EditPostViewController.m in Sources */,
-				BE3834811EB312C7006EE442 /* ViewController.m in Sources */,
 				BE270D8D1EB968AA008F9AF6 /* LoginViewController.m in Sources */,
 				BE270D631EB6D720008F9AF6 /* ThreadsTableViewController.m in Sources */,
 				BE270D721EB6DAA0008F9AF6 /* Thread.m in Sources */,
+				BE22D6921EBA3EE6008007DE /* Utils.m in Sources */,
 				BE38347E1EB312C7006EE442 /* AppDelegate.m in Sources */,
 				BE270D781EB862A8008F9AF6 /* Post.m in Sources */,
 				BE270D751EB8540F008F9AF6 /* ThreadsModel.m in Sources */,
 				BE270D7B1EB9273F008F9AF6 /* AddThreadViewController.m in Sources */,
 				BE270D7E1EB944A4008F9AF6 /* User.m in Sources */,
+				BE22D6991EBA7C67008007DE /* PostsTableViewCell.m in Sources */,
 				BE38347B1EB312C7006EE442 /* main.m in Sources */,
-				BE270D6C1EB6D7A4008F9AF6 /* ThreadsDetailViewController.m in Sources */,
-				BE270D661EB6D764008F9AF6 /* AddPostViewController.m in Sources */,
+				BE270D6C1EB6D7A4008F9AF6 /* ThreadDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +474,7 @@
 		};
 		BE38348E1EB312C7006EE442 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 189C846C6B407FEAB55B2120 /* Pods-Lolz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -393,6 +491,7 @@
 		};
 		BE38348F1EB312C7006EE442 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06ECC543D975D0C5A4A041A2 /* Pods-Lolz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (

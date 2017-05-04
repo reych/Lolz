@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^EditPostCompletionHandler)(NSString *text);
+
 @interface EditPostViewController : UIViewController
+@property EditPostCompletionHandler completionHandler;
+@property NSString *text;
 
 @end

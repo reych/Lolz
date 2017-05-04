@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void(^CompletionHandler)(UIImage *image, NSString *instructions);
+typedef void(^CompletionHandler)(NSString *imagePath, NSString *instructions);
 
 @interface AddThreadViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 @property (copy, nonatomic) CompletionHandler completionHandler;

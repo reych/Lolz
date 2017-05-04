@@ -9,6 +9,7 @@
 #import "EditPostViewController.h"
 
 @interface EditPostViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *postTextView;
 
 @end
 
@@ -16,13 +17,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.postTextView.text = self.text;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)cancelButtonDidPress:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
+- (IBAction)doneButtonDidPress:(UIBarButtonItem *)sender {
+    self.completionHandler(self.postTextView.text);
+}
+
 
 /*
 #pragma mark - Navigation

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface ThreadsTableViewController : UITableViewController
+@property User *user;
 
 @end

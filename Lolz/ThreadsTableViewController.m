@@ -9,6 +9,8 @@
 #import "ThreadsTableViewController.h"
 #import "ThreadsModel.h"
 #import "AddThreadViewController.h"
+#import "ThreadDetailViewController.h"
+#import "Utils.h"
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
@@ -18,15 +20,13 @@
 @end
 
 @implementation ThreadsTableViewController
+- (IBAction)menuButtonDidPress:(UIBarButtonItem *)sender {
+    [[FBSDKLoginManager new] logOut];
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    // Optional: Place the button in the center of your view.
-    loginButton.readPermissions = @[@"public_profile"];//, @"email", @"user_friends"];
-    
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
     
     self.threadsModel = [ThreadsModel sharedModel];
     
@@ -35,9 +35,11 @@
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
                  NSLog(@"fetched user:%@", result);
-                 
+                 self.user = [[User alloc] initWithName:result[@"name"]];
              }
          }];
+    } else {
+        NSLog(@"Normal logged in %@", self.user.username);
     }
     
     // Uncomment the following line to preserve selection between presentations.
@@ -68,9 +70,12 @@
     
     // Configure the cell...
     Thread* t = [self.threadsModel threadAtIndex:indexPath.row];
-    NSString* title = [NSString stringWithFormat:@"Image by %@", [t creator]];
+    NSString* title = [NSString stringWithFormat:@"Image by %@", t.creator];
     cell.textLabel.text = title;
-    //cell.imageView.image = [] //get cell image.
+    
+    NSString *path = [Utils createPathToDocumentDirectoryWithFilename:t.imageName];
+    
+    cell.imageView.image = [UIImage imageWithContentsOfFile:path];
     
     return cell;
 }
@@ -117,16 +122,30 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    AddThreadViewController* addThreadVC = segue.destinationViewController;
-    
-    addThreadVC.completionHandler = ^(UIImage* image, NSString *instructions){
-        // create a thread with the image.
-        [self.threadsModel insertWithCreator:@"Anon" image:image instructions:instructions];
-        [self.tableView reloadData];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    };
-    
-    // completion handler
+    if([segue.identifier  isEqual: @"threadsTableToAddThreadSegue"]) {
+        AddThreadViewController* addThreadVC = segue.destinationViewController;
+        
+        // completion handler
+        addThreadVC.completionHandler = ^(NSString* imageName, NSString *instructions){
+            // create a thread with the image.
+            NSLog(@"In completion handler");
+            [self.threadsModel insertWithCreator:self.user.username imageName:imageName instructions:instructions];
+            [self.tableView reloadData];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        };
+    } else if([segue.identifier isEqual: @"threadToDetailSegue"]) {
+        ThreadDetailViewController * threadDetailVC = segue.destinationViewController;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Thread *currentThread = [self.threadsModel threadAtIndex:indexPath.row];
+        threadDetailVC.thread = currentThread;
+        threadDetailVC.user = self.user;
+        threadDetailVC.updateHandler = ^(Thread *thread) {
+            [self.threadsModel updateThreadAtIndex:indexPath.row updatedThread:thread];
+            
+        };
+        
+    }
     
     
 }

@@ -9,5 +9,9 @@
 #import "User.h"
 
 @implementation User
-
+- (instancetype) initWithName:(NSString*) username {
+    self = [[User alloc] init];
+    _username = username;
+    return self;
+}
 @end

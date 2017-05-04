@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "Firebase.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,12 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    // Facebook
     [[FBSDKApplicationDelegate sharedInstance] application:application
                              didFinishLaunchingWithOptions:launchOptions];
-    // Add any custom logic here.
+    // Configure Firebase
+    [FIRApp configure];
+
     return YES;
 }
 

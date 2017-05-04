@@ -15,6 +15,8 @@
 
 - (NSUInteger) numberOfThreads;
 - (Thread *) threadAtIndex: (NSUInteger) index;
-- (void) insertWithCreator:(NSString*)creator image:(UIImage*)image instructions:(NSString*)instructions;
+- (void) updateThreadAtIndex: (NSUInteger) index updatedThread:(Thread *) updatedThread;
+- (void) insertWithCreator:(NSString*)creator imageName:(NSString*)imageName instructions:(NSString*)instructions;
+- (void) insertWithCreator:(NSString*) creator imageName:(NSString*) imageName date:(NSString*) date instructions: (NSString*) instructions posts:(NSMutableArray*) posts closed: (BOOL) closed;
 
 @end

@@ -9,17 +9,14 @@
 #import "Post.h"
 
 @interface Post()
-@property NSUInteger votes; // Update when thread is closed.
-@property (strong, nonatomic) NSString* author;
-@property (strong, nonatomic) NSString* text;
 @end
 
 @implementation Post
-- (instancetype) initWithText: (NSString*) text author: (NSString*) author {
+- (instancetype) initWithText: (NSString*) text author: (NSString*) author votes:(NSUInteger) votes{
     self = [super init];
     self.author = author;
     self.text = text;
-    self.votes = 0;
+    self.votes = votes;
     return self;
 }
 

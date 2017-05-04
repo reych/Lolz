@@ -13,4 +13,5 @@
 @interface User : NSObject
 @property (strong, nonatomic, readonly) NSString* username;
 
+- (instancetype) initWithName:(NSString*) username;
 @end
